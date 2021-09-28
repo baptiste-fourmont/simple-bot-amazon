@@ -5,6 +5,7 @@ class BOT():
     def __init__(self,url):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
         self.url = url
+        self.login()
         
     def login(self):
         self.driver.get(self.url)
@@ -44,4 +45,3 @@ class BOT():
             sleep(2)
             self.check()
 amazon = BOT("https://www.amazon.fr/gp/product/B08B3TYX1H?pf_rd_r=GKDPS0WD6T69P80CNKA9&pf_rd_p=ed1ef413-005c-474d-837a-434c7d76d0d9&pd_rd_r=b44baa92-e539-48c9-9006-596e95af4546&pd_rd_w=9OnMu&pd_rd_wg=Qympw&ref_=pd_gw_unk&th=1")
-amazon.login()
